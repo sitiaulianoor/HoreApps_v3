@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hore.rentalpelanggan">
+
+    <!--
+        The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+        Google Maps Android API v2, but you must specify either coarse or fine
+        location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyCWeoFzn6aYs1OnkdF_rah_H_zSVwCbtQI" />
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Disable opening of launcher Activity -->
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="Rental Pelanggan"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.rentalPelanggan_mainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Autentifikasi.InputBiodataPelanggan" />
+        <activity android:name=".Autentifikasi.Registrasi" />
+        <activity android:name=".Autentifikasi.Login" />
+        <activity
+            android:name=".MenuPencarian.MenuHasilPencarian"
+            android:label="@string/title_activity_menu_hasil_pencarian"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPencarian.MenuDetailTempat"
+            android:label="@string/title_activity_menu_detail_kendaraan"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCWeoFzn6aYs1OnkdF_rah_H_zSVwCbtQI" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".MenuProfilRental.ProfilRental"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPemesanan.RincianPenyewaan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPemesanan.BuatPenyewaan_denganLocker"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPemesanan.BuatPenyewaan_tanpaLocker"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPembayaran.DaftarRekeningPembayaran"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPembayaran.DetailPembayaran"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPembayaran.UnggahBuktiPembayaran"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.GambarBuktiPembayaran"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.DetailPemesananStatus1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.DetailPemesananStatus2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.DetailPemesananStatus3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.DetailPemesananStatus4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.DetailPemesananStatus5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.DetailPemesananStatus6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.DetailPemesananStatus7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.DetailPemesananStatus8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.GambarBuktiPembayaranPengembalianDana"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuKelolaPenyewaan.GambarBuktiSisaPembayaran"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPembatalan.PengajuanPembatalan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuProfilPelanggan.UbahProfilPelanggan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuUlasan.InputUlasanPelanggan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuUlasan.LihatUlasanPelanggan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuUlasan.DaftarUlasan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Autentifikasi.AutentifikasiTelepon" />
+
+        <service
+            android:name=".Services.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".PetaRental.PetaRental"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuPembayaran.UnggahBuktiSisaPembayaran"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".BackgroundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".PetaLokasiPenjemputan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MenuInfoKesehatan.DetailTipsOlahraga"
+            android:label="Detail Tips Olahraga"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+    </application>
+
+</manifest>
